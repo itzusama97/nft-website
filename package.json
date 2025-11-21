@@ -1,0 +1,16 @@
+{
+  "name": "nft-website",
+  "version": "1.0.0",
+  "description": "NFT Website with HTML and Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "echo 'Build complete - ready for deployment'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["nft", "html", "tailwindcss", "website"],
+  "author": "",
+  "license": "MIT"
+}
