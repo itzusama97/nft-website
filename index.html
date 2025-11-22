@@ -48,22 +48,24 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden pb-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300">About</a>
-                    <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300">Collection</a>
-                    <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300">Creator</a>
-                    <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300">Road Map</a>
-                    <button class="bg-[#DA8F4D] text-white px-10 py-3 rounded-xl text-sm font-medium hover:bg-[#c47f3d] transition duration-300 w-full shadow-lg">
-                        Sign In
-                    </button>
+            <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-black/80 backdrop-blur-md border-b border-white/10">
+                <div class="max-w-7xl mx-auto px-6 py-6">
+                    <div class="flex flex-col space-y-4">
+                        <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300 py-2">About</a>
+                        <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300 py-2">Collection</a>
+                        <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300 py-2">Creator</a>
+                        <a href="#" class="text-white text-sm font-medium hover:text-[#DA8F4D] transition duration-300 py-2">Road Map</a>
+                        <button class="bg-[#DA8F4D] text-white px-8 py-3 rounded-xl text-sm font-medium hover:bg-[#c47f3d] transition duration-300 w-full shadow-lg mt-4">
+                            Sign In
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="h-screen bg-black relative overflow-visible flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./img/header-bg.png');">
+    <section class="min-h-screen lg:h-screen bg-black relative overflow-visible flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./img/header-bg.png');">
         <!-- Bottom Shadow -->
         <div class="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent via-black/40 to-black pointer-events-none"></div>
         <!-- Background Pattern -->
@@ -72,51 +74,10 @@
             <div class="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-orange-600 to-red-600 rounded-full blur-3xl"></div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full pt-20">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full pt-36 lg:pt-20">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <!-- Left Content -->
-                <div class="flex-1 text-white space-y-8">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                        We Have High<br>
-                        Quality <span class="text-[#DA8F4D]">NFT</span><br>
-                        Collections
-                    </h1>
-
-                    <p class="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
-                    </p>
-
-                    <!-- Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-[#DA8F4D] text-white px-8 py-3 rounded-xl font-medium hover:bg-[#c47f3d] transition duration-300 text-base shadow-lg border border-white">
-                            Get Whitelist
-                        </button>
-                        <button class="bg-transparent text-white px-8 py-3 rounded-xl font-medium hover:bg-[#c47f3d] transition duration-300 text-base shadow-lg border border-white">
-                            Contact Us
-                        </button>
-                    </div>
-
-                    <!-- Stats -->
-                    <div class="relative bg-white/5 backdrop-blur-sm rounded-[2rem] p-8 w-fit">
-                        <div class="flex flex-wrap gap-12">
-                            <div>
-                                <div class="text-lg md:text-xl font-bold">240k+</div>
-                                <div class="text-gray-400 text-xs md:text-xs">Total Sale</div>
-                            </div>
-                            <div>
-                                <div class="text-lg md:text-xl font-bold">180k+</div>
-                                <div class="text-gray-400 text-xs md:text-xs">Auctions</div>
-                            </div>
-                            <div>
-                                <div class="text-lg md:text-xl font-bold">240k+</div>
-                                <div class="text-gray-400 text-xs md:text-xs">Artists</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Content - NFT Image -->
-                <div class="w-72 sm:w-80 lg:w-96 relative">
+                <!-- Right Content - NFT Image (First on mobile) -->
+                <div class="w-72 sm:w-80 lg:w-96 relative mx-auto order-1 lg:order-2">
                     <div class="relative">
                         <!-- Decorative Stars -->
                         <div class="absolute -top-8 -right-8 text-white text-4xl opacity-60">✦</div>
@@ -138,15 +99,56 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- Left Content (Second on mobile) -->
+                <div class="flex-1 text-white space-y-8 order-2 lg:order-1">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        We Have High<br>
+                        Quality <span class="text-[#DA8F4D]">NFT</span><br>
+                        Collections
+                    </h1>
+
+                    <p class="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-[#DA8F4D] text-white px-8 py-3 rounded-xl font-medium hover:bg-[#c47f3d] transition duration-300 text-base shadow-lg border border-white">
+                            Get Whitelist
+                        </button>
+                        <button class="bg-transparent text-white px-8 py-3 rounded-xl font-medium hover:bg-[#c47f3d] transition duration-300 text-base shadow-lg border border-white">
+                            Contact Us
+                        </button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="relative bg-white/5 backdrop-blur-sm rounded-[2rem] p-6 w-full lg:w-fit">
+                        <div class="flex justify-between lg:justify-start gap-6 md:gap-12">
+                            <div>
+                                <div class="text-base md:text-xl font-bold">240k+</div>
+                                <div class="text-gray-400 text-xs">Total Sale</div>
+                            </div>
+                            <div>
+                                <div class="text-base md:text-xl font-bold">180k+</div>
+                                <div class="text-gray-400 text-xs">Auctions</div>
+                            </div>
+                            <div>
+                                <div class="text-base md:text-xl font-bold">240k+</div>
+                                <div class="text-gray-400 text-xs">Artists</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section class="bg-black py-20">
+    <section class="bg-black py-12 lg:py-20">
         <div class="max-w-7xl mx-auto px-6">
             <!-- Section Title -->
-            <h2 class="text-white text-4xl md:text-5xl font-bold text-center mb-16">About Us</h2>
+            <h2 class="text-white text-4xl md:text-5xl font-bold text-center mb-8 lg:mb-16">About Us</h2>
         </div>
         
         <div class="bg-[#DA8F4D17] py-14">
@@ -198,13 +200,13 @@
     </section>
 
     <!-- Top Collections Section -->
-<section class="bg-black py-20 relative">
+<section class="bg-black pt-2 pb-6 lg:py-20 relative">
     <!-- Heading Area with Shadow -->
     <div class="relative">
         <!-- White Shadow from bottom left -->
         <div class="absolute bottom-0 left-0 w-64 h-32 bg-white/50 blur-[100px] pointer-events-none"></div>
         
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-8 lg:mb-16 relative z-10">
             <h2 class="text-white text-4xl md:text-5xl font-bold mb-4">Top Collections</h2>
             <p class="text-gray-400 text-sm">The largest and unique Super rare NFT marketplace</p>
             <p class="text-gray-400 text-sm">For crypto-collectibles</p>
@@ -358,13 +360,13 @@
 </section>
 
 <!-- Top Creators Section -->
-<section class="bg-black py-20 relative">
+<section class="bg-black py-12 lg:py-20 relative">
     <!-- Heading Area with Shadow -->
     <div class="relative">
         <!-- White Shadow from top right -->
-        <div class="absolute -top-10 -right-10 w-48 h-48 bg-white/30 blur-[80px] pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-64 h-32 bg-white/50 blur-[100px] pointer-events-none"></div>
         
-        <div class="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-8 lg:mb-16 relative z-10">
             <h2 class="text-white text-4xl md:text-5xl font-bold mb-4">Top Creators</h2>
             <p class="text-gray-400 text-sm">Checkout Top Rated Creators On The NFT Marketplace</p>
         </div>
@@ -444,28 +446,28 @@
 <!-- Road Map Section -->
 <section class="bg-black">
     <!-- Heading -->
-    <div class="max-w-7xl mx-auto px-6 mb-20">
+    <div class="max-w-7xl mx-auto px-6 mb-8 lg:mb-20">
         <h2 class="text-white text-4xl md:text-5xl font-bold text-center">Road Map</h2>
     </div>
 </section>
 
 <!-- Road Map Content with Background Image -->
-<section class="relative py-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/header-bg.png');">
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
+<section class="relative py-8 lg:py-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/header-bg.png');">
+    <div class="max-w-7xl mx-auto px-4 relative z-10 overflow-hidden">
         <!-- Timeline Container -->
         <div class="relative">
             <!-- Central Timeline Line -->
-            <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DA8F4D] to-[#EA9112] transform -translate-x-1/2"></div>
+            <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DA8F4D] to-[#EA9112] transform -translate-x-1/2 hidden md:block"></div>
             
             <!-- Timeline Items Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
                 
                 <!-- January - Left Side -->
                 <div class="relative md:text-left">
-                    <div class="flex flex-col items-start md:items-end">
-                        <div class="absolute left-1/2 md:left-auto md:right-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 md:translate-x-1/2 z-20"></div>
+                    <div class="flex flex-col items-center md:items-end">
+                        <div class="absolute left-1/2 md:left-auto md:right-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 md:translate-x-1/2 z-20 hidden md:block"></div>
                         
-                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-6 w-full md:w-5/6 ml-8 md:ml-0 md:mr-8">
+                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-4 w-full md:w-5/6 mx-auto md:mx-8">
                             <div class="text-[#DA8F4D] text-sm font-medium mb-2 text-center">January</div>
                             <h3 class="text-white text-xl font-bold mb-3">Brief</h3>
                             <p class="text-gray-300 text-sm leading-relaxed">
@@ -477,10 +479,10 @@
 
                 <!-- February - Right Side -->
                 <div class="relative">
-                    <div class="flex flex-col items-start">
-                        <div class="absolute left-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 z-20"></div>
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="absolute left-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 z-20 hidden md:block"></div>
                         
-                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-6 w-full md:w-5/6 ml-8">
+                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-4 w-full md:w-5/6 mx-auto md:mx-8">
                             <div class="text-[#DA8F4D] text-sm font-medium mb-2 text-center">February</div>
                             <h3 class="text-white text-xl font-bold mb-3">Research</h3>
                             <p class="text-gray-300 text-sm leading-relaxed">
@@ -492,10 +494,10 @@
 
                 <!-- March - Left Side -->
                 <div class="relative md:text-left">
-                    <div class="flex flex-col items-start md:items-end">
-                        <div class="absolute left-1/2 md:left-auto md:right-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 md:translate-x-1/2 z-20"></div>
+                    <div class="flex flex-col items-center md:items-end">
+                        <div class="absolute left-1/2 md:left-auto md:right-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 md:translate-x-1/2 z-20 hidden md:block"></div>
                         
-                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-6 w-full md:w-5/6 ml-8 md:ml-0 md:mr-8">
+                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-4 w-full md:w-5/6 mx-auto md:mx-8">
                             <div class="text-[#DA8F4D] text-sm font-medium mb-2 text-center">March</div>
                             <h3 class="text-white text-xl font-bold mb-3">Discover</h3>
                             <p class="text-gray-300 text-sm leading-relaxed">
@@ -507,10 +509,10 @@
 
                 <!-- April - Right Side -->
                 <div class="relative">
-                    <div class="flex flex-col items-start">
-                        <div class="absolute left-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 z-20"></div>
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="absolute left-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 z-20 hidden md:block"></div>
                         
-                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-6 w-full md:w-5/6 ml-8">
+                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-4 w-full md:w-5/6 mx-auto md:mx-8">
                             <div class="text-[#DA8F4D] text-sm font-medium mb-2 text-center">April</div>
                             <h3 class="text-white text-xl font-bold mb-3">Design</h3>
                             <p class="text-gray-300 text-sm leading-relaxed">
@@ -522,10 +524,10 @@
 
                 <!-- May - Left Side -->
                 <div class="relative md:text-left">
-                    <div class="flex flex-col items-start md:items-end">
-                        <div class="absolute left-1/2 md:left-auto md:right-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 md:translate-x-1/2 z-20"></div>
+                    <div class="flex flex-col items-center md:items-end">
+                        <div class="absolute left-1/2 md:left-auto md:right-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 md:translate-x-1/2 z-20 hidden md:block"></div>
                         
-                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-6 w-full md:w-5/6 ml-8 md:ml-0 md:mr-8">
+                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-4 w-full md:w-5/6 mx-auto md:mx-8">
                             <div class="text-[#DA8F4D] text-sm font-medium mb-2 text-center">May</div>
                             <h3 class="text-white text-xl font-bold mb-3">Testing</h3>
                             <p class="text-gray-300 text-sm leading-relaxed">
@@ -537,10 +539,10 @@
 
                 <!-- June - Right Side -->
                 <div class="relative">
-                    <div class="flex flex-col items-start">
-                        <div class="absolute left-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 z-20"></div>
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="absolute left-0 top-6 w-6 h-6 bg-[#DA8F4D] rounded-full border-4 border-black transform -translate-x-1/2 z-20 hidden md:block"></div>
                         
-                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-6 w-full md:w-5/6 ml-8">
+                        <div class="bg-white/10 backdrop-blur-md border-2 border-[#DA8F4D] rounded-2xl p-4 w-full md:w-5/6 mx-auto md:mx-8">
                             <div class="text-[#DA8F4D] text-sm font-medium mb-2 text-center">June</div>
                             <h3 class="text-white text-xl font-bold mb-3">Launch & Feedback</h3>
                             <p class="text-gray-300 text-sm leading-relaxed">
